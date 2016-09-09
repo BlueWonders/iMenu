@@ -15,6 +15,11 @@
 		189CC7221D6DC4130053F66D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189CC7201D6DC4130053F66D /* LaunchScreen.storyboard */; };
 		189CC72D1D6DC4130053F66D /* iMenuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189CC72C1D6DC4130053F66D /* iMenuTests.swift */; };
 		189CC7381D6DC4130053F66D /* iMenuUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189CC7371D6DC4130053F66D /* iMenuUITests.swift */; };
+		189CC7481D6DC5C50053F66D /* closeMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 189CC7461D6DC5C50053F66D /* closeMenu.png */; };
+		189CC7491D6DC5C50053F66D /* mobile-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 189CC7471D6DC5C50053F66D /* mobile-icon.png */; };
+		189CC75B1D6DCF5C0053F66D /* cat.png in Resources */ = {isa = PBXBuildFile; fileRef = 189CC75A1D6DCF5C0053F66D /* cat.png */; };
+		189CC75D1D6DD13B0053F66D /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189CC75C1D6DD13B0053F66D /* UIViewExtensions.swift */; };
+		189CC7611D6DDBEA0053F66D /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189CC7601D6DDBEA0053F66D /* GlobalVariables.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		189CC7331D6DC4130053F66D /* iMenuUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMenuUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		189CC7371D6DC4130053F66D /* iMenuUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMenuUITests.swift; sourceTree = "<group>"; };
 		189CC7391D6DC4130053F66D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		189CC7461D6DC5C50053F66D /* closeMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = closeMenu.png; sourceTree = "<group>"; };
+		189CC7471D6DC5C50053F66D /* mobile-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mobile-icon.png"; sourceTree = "<group>"; };
+		189CC75A1D6DCF5C0053F66D /* cat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cat.png; sourceTree = "<group>"; };
+		189CC75C1D6DD13B0053F66D /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		189CC7601D6DDBEA0053F66D /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,8 @@
 		189CC7081D6DC4110053F66D = {
 			isa = PBXGroup;
 			children = (
+				189CC7591D6DCF5C0053F66D /* IconsMenu */,
+				189CC7451D6DC5C50053F66D /* Pictures */,
 				189CC7131D6DC4130053F66D /* iMenu */,
 				189CC72B1D6DC4130053F66D /* iMenuTests */,
 				189CC7361D6DC4130053F66D /* iMenuUITests */,
@@ -101,6 +113,8 @@
 			children = (
 				189CC7141D6DC4130053F66D /* AppDelegate.swift */,
 				189CC7161D6DC4130053F66D /* ViewController.swift */,
+				189CC7601D6DDBEA0053F66D /* GlobalVariables.swift */,
+				189CC75C1D6DD13B0053F66D /* UIViewExtensions.swift */,
 				189CC7181D6DC4130053F66D /* Main.storyboard */,
 				189CC71E1D6DC4130053F66D /* Assets.xcassets */,
 				189CC7201D6DC4130053F66D /* LaunchScreen.storyboard */,
@@ -126,6 +140,25 @@
 				189CC7391D6DC4130053F66D /* Info.plist */,
 			);
 			path = iMenuUITests;
+			sourceTree = "<group>";
+		};
+		189CC7451D6DC5C50053F66D /* Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				189CC7461D6DC5C50053F66D /* closeMenu.png */,
+				189CC7471D6DC5C50053F66D /* mobile-icon.png */,
+			);
+			name = Pictures;
+			path = iMenu/Pictures;
+			sourceTree = "<group>";
+		};
+		189CC7591D6DCF5C0053F66D /* IconsMenu */ = {
+			isa = PBXGroup;
+			children = (
+				189CC75A1D6DCF5C0053F66D /* cat.png */,
+			);
+			name = IconsMenu;
+			path = iMenu/IconsMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +265,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				189CC75B1D6DCF5C0053F66D /* cat.png in Resources */,
 				189CC7221D6DC4130053F66D /* LaunchScreen.storyboard in Resources */,
 				189CC71F1D6DC4130053F66D /* Assets.xcassets in Resources */,
 				189CC71A1D6DC4130053F66D /* Main.storyboard in Resources */,
+				189CC7491D6DC5C50053F66D /* mobile-icon.png in Resources */,
+				189CC7481D6DC5C50053F66D /* closeMenu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +297,9 @@
 			files = (
 				189CC71D1D6DC4130053F66D /* iMenu.xcdatamodeld in Sources */,
 				189CC7171D6DC4130053F66D /* ViewController.swift in Sources */,
+				189CC75D1D6DD13B0053F66D /* UIViewExtensions.swift in Sources */,
 				189CC7151D6DC4130053F66D /* AppDelegate.swift in Sources */,
+				189CC7611D6DDBEA0053F66D /* GlobalVariables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +445,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oskayazilim.iMenu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluewonders.iMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -418,7 +456,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = iMenu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.oskayazilim.iMenu;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluewonders.iMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -488,6 +526,7 @@
 				189CC73E1D6DC4130053F66D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		189CC73F1D6DC4130053F66D /* Build configuration list for PBXNativeTarget "iMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +535,7 @@
 				189CC7411D6DC4130053F66D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		189CC7421D6DC4130053F66D /* Build configuration list for PBXNativeTarget "iMenuUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +544,7 @@
 				189CC7441D6DC4130053F66D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iMenu" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,67 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ajI-0U-HBz">
+                                <rect key="frame" x="0.0" y="28" width="600" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pq9-iC-0qg">
+                                        <rect key="frame" x="15" y="7" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="G7f-eg-lpI"/>
+                                            <constraint firstAttribute="height" constant="35" id="sfJ-Ws-PLn"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="mobile-icon.png"/>
+                                        <connections>
+                                            <action selector="MenuButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xVI-aQ-fF9"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iMenu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YD5-lu-rw5">
+                                        <rect key="frame" x="58" y="14" width="485" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="600" id="0bz-si-e6t"/>
+                                    <constraint firstItem="pq9-iC-0qg" firstAttribute="top" secondItem="ajI-0U-HBz" secondAttribute="top" constant="7" id="Mdt-sI-gf2"/>
+                                    <constraint firstItem="YD5-lu-rw5" firstAttribute="leading" secondItem="pq9-iC-0qg" secondAttribute="trailing" constant="8" id="Ndt-bQ-zkO"/>
+                                    <constraint firstAttribute="bottom" secondItem="pq9-iC-0qg" secondAttribute="bottom" constant="8" id="XiY-ZF-gOV"/>
+                                    <constraint firstAttribute="trailing" secondItem="YD5-lu-rw5" secondAttribute="trailing" constant="57" id="iG4-M1-DG9"/>
+                                    <constraint firstAttribute="bottom" secondItem="YD5-lu-rw5" secondAttribute="bottom" constant="15" id="rAo-ZT-3Ws"/>
+                                    <constraint firstItem="YD5-lu-rw5" firstAttribute="top" secondItem="ajI-0U-HBz" secondAttribute="top" constant="14" id="w8h-9a-S27"/>
+                                    <constraint firstAttribute="height" constant="50" id="wdB-sf-MOF"/>
+                                    <constraint firstItem="pq9-iC-0qg" firstAttribute="leading" secondItem="ajI-0U-HBz" secondAttribute="leading" constant="15" id="xmi-2y-e7a"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" alpha="0.050000000000000003" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat.png" translatesAutoresizingMaskIntoConstraints="NO" id="OCn-Z5-rXg">
+                                <rect key="frame" x="72" y="151" width="456" height="441"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OCn-Z5-rXg" firstAttribute="top" secondItem="ajI-0U-HBz" secondAttribute="bottom" constant="73" id="1gq-9e-jYv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OCn-Z5-rXg" secondAttribute="trailing" constant="52" id="5iv-QR-haX"/>
+                            <constraint firstItem="ajI-0U-HBz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="28" id="SeN-AU-hNX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OCn-Z5-rXg" secondAttribute="bottom" constant="8" id="Xa8-hf-0Dq"/>
+                            <constraint firstAttribute="trailing" secondItem="ajI-0U-HBz" secondAttribute="trailing" id="ZEO-ka-Vle"/>
+                            <constraint firstItem="OCn-Z5-rXg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="52" id="ft1-ke-cO1"/>
+                            <constraint firstItem="ajI-0U-HBz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qQO-kg-vfO"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="buttonMenu" destination="pq9-iC-0qg" id="Jcv-V0-EoE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="345"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cat.png" width="384" height="384"/>
+        <image name="mobile-icon.png" width="100" height="100"/>
+    </resources>
 </document>
