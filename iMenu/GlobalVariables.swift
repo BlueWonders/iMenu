@@ -27,13 +27,13 @@ class GlobalVariables: UIViewController {
     func getScreenBounds() -> CGRect
     {
         
-        return UIScreen.mainScreen().bounds
+        return UIScreen.main.bounds
     }
     
     func getScreenNativeBounds() -> CGRect
     {
         
-        return UIScreen.mainScreen().nativeBounds
+        return UIScreen.main.nativeBounds
     }
    
     
@@ -42,10 +42,10 @@ class GlobalVariables: UIViewController {
         
         var iTablet : Bool = true
         
-        if(UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad)
+        if(UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.pad)
         {
             iTablet = true
-        }else if (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone)
+        }else if (UIDevice.current.userInterfaceIdiom == UIUserInterfaceIdiom.phone)
         {
             iTablet = false
         }
@@ -57,13 +57,13 @@ class GlobalVariables: UIViewController {
      
         var situation : Bool = true
         
-        let screenSize : CGRect = UIScreen.mainScreen().bounds
+        let screenSize : CGRect = UIScreen.main.bounds
         
-        if(UIDeviceOrientationIsLandscape(UIDevice.currentDevice().orientation))
+        if(UIDeviceOrientationIsLandscape(UIDevice.current.orientation))
         {
             situation  = true
         }
-        else if (UIDeviceOrientationIsPortrait(UIDevice.currentDevice().orientation))
+        else if (UIDeviceOrientationIsPortrait(UIDevice.current.orientation))
         {
             situation  = false
         }
